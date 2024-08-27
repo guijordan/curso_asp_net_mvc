@@ -9,7 +9,7 @@ namespace LanchesMac.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "CarrinhoCompraItens",
+                name: "CarrinhoCompraItems",
                 columns: table => new
                 {
                     CarrinhoCompraItemId = table.Column<int>(type: "int", nullable: false)
@@ -30,14 +30,14 @@ namespace LanchesMac.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_CarrinhoCompraItens_LancheId",
-                table: "CarrinhoCompraItens",
+                table: "CarrinhoCompraItems",
                 column: "LancheId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "CarrinhoCompraItens");
+                name: "CarrinhoCompraItems");
         }
     }
 }
