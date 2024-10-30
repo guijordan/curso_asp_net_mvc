@@ -30,6 +30,7 @@ builder.Services.AddTransient<IPedidoRepository, PedidoRepository>();
 builder.Services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
 builder.Services.AddScoped<RelatorioVendasService>();
 builder.Services.AddScoped<GraficoVendasService>();
+builder.Services.AddScoped<RelatorioLanchesService>();
 
 builder.Services.AddAuthorization(options =>
 {
@@ -53,6 +54,8 @@ builder.Services.AddPaging(options =>
 
 builder.Services.AddMemoryCache();
 builder.Services.AddSession();
+
+builder.Services.AddFastReport();
 
 
 var app = builder.Build();
